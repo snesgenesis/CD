@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+echo "Changing directory to /home/centegix/gateway..."
+
+cd /home/centegix/gateway || {
+    echo "ERROR: Could not change directory"
+    exit 1
+}
+
+echo "Successfully changed directory."
+echo "Current directory:"
+pwd
