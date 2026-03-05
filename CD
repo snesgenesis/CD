@@ -1,12 +1,8 @@
-#!/usr/bin/env bash
+GATEWAY_DIR="/home/centegix/gateway"
 
-echo "Changing directory to /home/centegix/gateway..."
-
-cd /home/centegix/gateway || {
-    echo "ERROR: Could not change directory"
+if [ -d "$GATEWAY_DIR" ]; then
+    cd "$GATEWAY_DIR"
+else
+    echo "Directory not found: $GATEWAY_DIR"
     exit 1
-}
-
-echo "Successfully changed directory."
-echo "Current directory:"
-pwd
+fi
